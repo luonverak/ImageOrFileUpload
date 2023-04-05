@@ -31,4 +31,10 @@ public class ImageController {
 		return "Welcome!";
 	}
 
+	@GetMapping("/fetch")
+	public String welcome() {
+		return "Welcome welcome!";
+	}
+
+
 }
