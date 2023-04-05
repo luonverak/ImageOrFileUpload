@@ -3,6 +3,7 @@ package com.thiruacademy.controller;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,6 +24,11 @@ public class ImageController {
 			@RequestParam("name") String name,
 			@RequestParam("description") String description) throws IOException {
 		return imageService.saveImage(file, name, description);
+	}
+	
+	@GetMapping("/")
+	public String sayHello() {
+		return "Welcome!";
 	}
 
 }
